@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&display=swap');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  font-family: 'Noto Sans KR', sans-serif;
+  color:#000;
+  font-size:15px;
+  text-decoration: none;
+}
+:focus {
+    outline: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+a:focus,
+a:active,
+a:hover {
+    outline: 0;
+}
+.wrap{ width:100%; height:100%;}
+
+header{
+  width:100%;
+  position:absolute;
+  z-index:9
+}
+h1.logo{
+  display: inline-block;
+  float: left;
+  margin: 42px 37px 41px 120px;
+  width: 140px;
+  height: 37px;
+  background-image: url('http://img.babathe.com/upload/festa_main/logo-onaight.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  text-indent: -9999rem;
+  }
+  .clearfix{*zoom: 1;}
+  .clearfix:after{content:''; display: block; clear:both; float:none;}
+
+  .gnb ul{overflow: hidden; display: block; float:left;margin: 0 0 0 ;}
+  .sub-util-nav{ float:right;margin:0px 120px 0 0;}
+  .gnb ul li,.sub-util-nav ul li,.sub-util-nav ul{float:left;}
+  .gnb ul li a,.sub-util-nav ul li a,.sub-util-nav div.language_box a{display: inline-block; padding:53px 36px 50px;}
+  .sub-util-nav div.language_box{position: relative; float: left;}
+  .sub-util-nav div.language_box a em{ display: inline-block; margin:0 0 0 12px;}
+  .sub-util-nav div.language_box ul{
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 0 rgba(10,90,150,.25);
+    top: 100px;
+    padding: 28px 0;
+  }
+  .sub-util-nav div.language_box ul li {margin:10px 20px;}
+  .sub-util-nav div.language_box ul li a{padding:10px 5px;}
+  .sub-util-nav div.language_box ul li a img{width:100%;}
+/*  .sub-util-nav div.language_box:focus ul, .sub-util-nav div.language_box:hover  ul{ display:block;}*/
+  .wrap .main_bg{
+    background-image: url('http://img.babathe.com/upload/festa_main/bg-main-img-01.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 700px;
+    padding:120px 0 0;
+    width: 100%;
+    float: left;
+  }
+  .countainer{margin:75px 0 0 120px; }
+  .countainer h1,.countainer h1 span{ font-size:44px;line-height: 1.23;font-weight: bold;}
+  .countainer h1 span{display: block;}
+  .main_txt ul{margin:31px 0 0;}
+  .main_txt ul li,.main_txt ul li span{display:block; font-size:16px; line-height: 1.88}
+  .main_txt ul li span{display: inline-block;}
+  .moblie_gnb,.gnb_wrap{display: none;}
+
+@media all and (max-width:1280px){
+   .sub-util-nav > ul li:nth-child(1),.sub-util-nav > ul  li:nth-child(2){display:none;}
+   h1.logo{margin: 28px 17px 21px 60px;}
+   .gnb ul li a, .sub-util-nav ul li a,.sub-util-nav div.language_box a{padding: 40px 24px 60px;}
+   .sub-util-nav{margin:0 80px 0 0;}
+   .sub-util-nav ul li.language_box ul{width:80%;   top: 50px;}
+   .countainer{margin:55px 0 0 60px; }
+}
+
+@media all and (max-width:768px){
+  .wrap{overflow-x: hidden;}
+  h1.logo{margin: 42px 0 41px 40px;}
+  .gnb ,.sub-util-nav > ul {display:none;}
+  .moblie_gnb, .gnb_wrap{display: block}
+  .sub-util-nav div.language_box a{    padding: 46px 24px 60px;}
+  .mobile_nav {
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    top: -100vh;
+  /* right:-100%;*/
+    width: 100vw;
+    height:100vh;
+    background-color: #fff;
+    z-index: 999;
+    visibility: hidden;
+   }
+   .mobile_nav.open{
+     top: 0px;
+     visibility: visible;
+
+   }
+  .mobile_nav ul{padding: 79px 20px 0;}
+  .mobile_nav ul li{ text-align: center; margin:10px 0;}
+  .mobile_nav ul li a{padding: 20px; display: block;}
+  .mobile_nav ul li a:hover{background-color:#2233a3; color:#fff;}
+  .countainer{margin:55px 0 0 20px; }
+  .mgnb_open_btn,.mgnb_close_btn{
+		display:block; position:absolute; top:42px; right:20px; z-index:99;
+		background:none;
+		width:40px; height:40px; transition:all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+		-webkit-transition:all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+		-oz-transition:all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+		-ms-transition:all 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
+	}
+	.mgnb_open_btn .line,.mgnb_close_btn .line{
+		display:block; width:26px; height:3px; background-color:#2233a3; margin:6px auto;
+		-webkit-transition: all 0.3s ease-in-out;
+	  -o-transition: all 0.3s ease-in-out;
+	  transition: all 0.3s ease-in-out;
+	}
+  .mgnb_open_btn .line:nth-child(1){width:15px;margin: 6px 0 0 7px;}
+  .mgnb_open_btn .line:nth-child(3){width:15px;margin: 6px 0 0 17px;}
+	.mgnb_close_btn.active .line{background-color:#000; z-index:9999}
+	.mgnb_close_btn.active .line:nth-child(2), .mgnb_close_btn.active .line:nth-child(4){opacity: 0;}
+	.mgnb_close_btn.active .line:nth-child(1){
+		 -webkit-transform: translateY(10px) rotate(45deg);
+		  -ms-transform: translateY(10px) rotate(45deg);
+		  -o-transform: translateY(10px) rotate(45deg);
+		  transform: translateY(10px) rotate(45deg);
+	}
+	.mgnb_close_btn.active .line:nth-child(3){
+		 -webkit-transform: translateY(-8px) rotate(-45deg);
+		  -ms-transform: translateY(-8px) rotate(-45deg);
+		  -o-transform: translateY(-8px) rotate(-45deg);
+		  transform: translateY(-8px) rotate(-45deg);
+	}
+
+}
+
+@media all and (max-width:500px){
+    h1.logo{margin: 21px 0 21px 20px;}
+    .mgnb_open_btn,.mgnb_close_btn{top:21px}
+    .countainer h1, .countainer h1 span{font-size:30px;}
+    .main_txt ul{margin:16px 0 0;}
+    .main_txt ul li{font-size:14px;}
+    .main_txt ul li span{display: block;}
+    .sub-util-nav div.language_box a{  padding: 23px 24px 30px;}
+    .sub-util-nav div.language_box ul{top:50px;}
+}
